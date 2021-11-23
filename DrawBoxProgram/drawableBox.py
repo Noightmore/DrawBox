@@ -32,13 +32,11 @@ def filling(depth,height):
     randomNum = random.randrange(1,10)
     if depth < height/3:
         return " "
-    elif depth < (4*height)/9 and depth > (2*height)/9:       
+    if depth < (4*height)/9 and depth > (1*height)/9:       
         if randomNum < 4:
             return "o"
-        else:
-            return " "
-    else:
-        if randomNum < 7:
-            return "o"
-        else:
-            return " "
+        return " "
+
+    if randomNum < 7:
+        return "o"
+    return " "
